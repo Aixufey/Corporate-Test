@@ -34,3 +34,30 @@ You can check out [the Next.js GitHub repository](https://github.com/vercel/next
 The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
 
 Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+
+## Concept of routes
+
+- File based routes: folder defines the route path to the fixed page `page.tsx` and will be imported to `layout.tsx` then rendered as child when exported. Basically `layout.tsx` is a global parent component.
+
+Example: localhost:3000/performance the page will be rendered as a child of `layout.tsx` that most likely contains some shared elements, i.e. a navigation menu etc.
+
+```jsx
+<Layout>
+  <Home />
+  <PerformancePage />
+</Layout>
+
+```
+
+```mermaid
+flowchart LR
+A[folder/page.tsx]
+B[layout.tsx]
+A ---> B
+```
+
+---
+
+## Absolute import with @escape
+
+- When importing, instead of relative paths, use `@` for absolute imports.
