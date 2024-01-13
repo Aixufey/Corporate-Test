@@ -55,3 +55,9 @@ A[folder/page.tsx]
 B[layout.tsx]
 A ---> B
 ```
+
+---
+
+## Absolute import with @escape
+
+- When importing, instead of relative paths, use `@` for absolute imports.

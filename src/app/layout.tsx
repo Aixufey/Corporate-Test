@@ -1,6 +1,6 @@
+import { HeaderItem } from "@/components";
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
-import Link from "next/link";
 import "./globals.css";
 
 const inter = Inter({ subsets: ["latin"] });
@@ -18,11 +18,7 @@ export default function RootLayout({
     return (
         <html lang="en">
             <body className={inter.className}>
-                <div>
-                    <Link href={"/performance"}>Go to performance</Link>
-                    <Link href={"/reliability/details"}>Go to reliability</Link>
-                    <Link href={"/scale"}>Go to scale</Link>
-                </div>
+                <HeaderItem />
                 {children}
             </body>
         </html>
